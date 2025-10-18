@@ -28,144 +28,6 @@ graph TD
     I --> I1["NoneType"]
 ```
 
----
-
-# 🧩 2. Text Type (`str`)
-
-```mermaid
-graph TD
-    A["String (Immutable)"] --> B["Core"]
-    A --> C["Indexing"]
-    A --> D["Slicing"]
-    A --> E["Encoding / Decoding"]
-
-    F["Example: 'Aromatic and Bold'"] --> G["Index 0: 'A'"]
-    F --> H["Index 1: 'r'"]
-```
-
----
-
-# 🔢 3. Numeric Types
-
-```mermaid
-graph TD
-    A["Numeric Types"] --> B["int"]
-    A --> C["float"]
-    A --> D["complex"]
-
-    B --> B1["Example: x = 10"]
-    C --> C1["Example: pi = 3.14"]
-    D --> D1["Example: z = 2 + 3j"]
-```
-
----
-
-# 📜 4. Sequence Types
-
-```mermaid
-graph TD
-    A["Sequence Types"] --> B["list (Mutable)"]
-    A --> C["tuple (Immutable)"]
-    A --> D["range (Immutable)"]
-
-    B --> B1["Example: ['apple', 'banana', 'cherry']"]
-    B --> B2["Methods: append(), remove(), sort()"]
-    C --> C1["Example: (10, 20, 30)"]
-    C --> C2["Immutable, supports indexing/slicing"]
-    D --> D1["Example: range(5) => 0,1,2,3,4"]
-```
-
----
-
-# 🧭 5. Mapping Type (`dict`)
-
-```mermaid
-graph TD
-    A["Dictionary (Mutable)"] --> B["Keys"]
-    A --> C["Values"]
-    A --> D["Items"]
-    A --> E["Methods: update(), pop(), clear()"]
-
-    F["Example: {'name': 'Alex', 'age': 21}"] --> G["student['name'] = 'Alex'"]
-```
-
----
-
-# 🧮 6. Set Types
-
-```mermaid
-graph TD
-    A["Set Types"] --> B["set (Mutable)"]
-    A --> C["frozenset (Immutable)"]
-
-    B --> B1["Unique Elements"]
-    B --> B2["Supports Union, Intersection, Difference"]
-    C --> C1["Immutable and Unordered"]
-
-    D["Example: {'red', 'green', 'blue'}"]
-```
-
----
-
-# ⚙️ 7. Boolean Type
-
-```mermaid
-graph TD
-    A["Boolean Type"] --> B["True"]
-    A --> C["False"]
-    D["Example: 5 > 2 → True"]
-```
-
----
-
-# 🧵 8. Binary Types
-
-```mermaid
-graph TD
-    A["Binary Types"] --> B["bytes (Immutable)"]
-    A --> C["bytearray (Mutable)"]
-    A --> D["memoryview (Mutable)"]
-
-    B --> B1["Example: b'hello'"]
-    C --> C1["Example: bytearray(5)"]
-    D --> D1["Example: memoryview(b'hello')"]
-```
-
----
-
-# 🕳 9. None Type
-
-```mermaid
-graph TD
-    A["NoneType"] --> B["Represents no value"]
-    B --> C["Example: x = None"]
-```
-
----
-
-# 🔒 10. Mutability Summary
-
-```mermaid
-graph LR
-    A["Immutable"] --> A1["int"]
-    A --> A2["float"]
-    A --> A3["complex"]
-    A --> A4["str"]
-    A --> A5["tuple"]
-    A --> A6["frozenset"]
-    A --> A7["bytes"]
-    A --> A8["bool"]
-    A --> A9["NoneType"]
-
-    B["Mutable"] --> B1["list"]
-    B --> B2["dict"]
-    B --> B3["set"]
-    B --> B4["bytearray"]
-    B --> B5["memoryview"]
-```
-
----
-
 ## 🧠 Python Data Types Overview
 
 ### **1. Standard Classification**
@@ -212,6 +74,17 @@ String
 
 🧱 Immutable → once created, can’t change individual characters.
 
+```mermaid
+graph TD
+    A["String (Immutable)"] --> B["Core"]
+    A --> C["Indexing"]
+    A --> D["Slicing"]
+    A --> E["Encoding / Decoding"]
+
+    F["Example: 'Aromatic and Bold'"] --> G["Index 0: 'A'"]
+    F --> H["Index 1: 'r'"]
+```
+
 ---
 
 ## 🔢 **2. Numeric Types**
@@ -250,9 +123,35 @@ Numeric
  └── complex
 ```
 
+```mermaid
+graph TD
+    A["Numeric Types"] --> B["int"]
+    A --> C["float"]
+    A --> D["complex"]
+
+    B --> B1["Example: x = 10"]
+    C --> C1["Example: pi = 3.14"]
+    D --> D1["Example: z = 2 + 3j"]
+```
+
+---
+
 ---
 
 ## 📜 **3. Sequence Types**
+
+```mermaid
+graph TD
+    A["Sequence Types"] --> B["list (Mutable)"]
+    A --> C["tuple (Immutable)"]
+    A --> D["range (Immutable)"]
+
+    B --> B1["Example: ['apple', 'banana', 'cherry']"]
+    B --> B2["Methods: append(), remove(), sort()"]
+    C --> C1["Example: (10, 20, 30)"]
+    C --> C2["Immutable, supports indexing/slicing"]
+    D --> D1["Example: range(5) => 0,1,2,3,4"]
+```
 
 ### (a) **List**
 
@@ -311,6 +210,16 @@ r = range(5)  # 0,1,2,3,4
 
 ## 🧭 **4. Mapping Type: Dictionary (`dict`)**
 
+```mermaid
+graph TD
+    A["Dictionary (Mutable)"] --> B["Keys"]
+    A --> C["Values"]
+    A --> D["Items"]
+    A --> E["Methods: update(), pop(), clear()"]
+
+    F["Example: {'name': 'Alex', 'age': 21}"] --> G["student['name'] = 'Alex'"]
+```
+
 **Mutable**, key–value pairs
 
 ```python
@@ -331,6 +240,18 @@ Dictionary
 ---
 
 ## 🧮 **5. Set Types**
+
+```mermaid
+graph TD
+    A["Set Types"] --> B["set (Mutable)"]
+    A --> C["frozenset (Immutable)"]
+
+    B --> B1["Unique Elements"]
+    B --> B2["Supports Union, Intersection, Difference"]
+    C --> C1["Immutable and Unordered"]
+
+    D["Example: {'red', 'green', 'blue'}"]
+```
 
 ### (a) **set**
 
@@ -354,6 +275,13 @@ fset = frozenset(["a", "b", "c"])
 
 ## ⚙️ **6. Boolean Type (`bool`)**
 
+```mermaid
+graph TD
+    A["Boolean Type"] --> B["True"]
+    A --> C["False"]
+    D["Example: 5 > 2 → True"]
+```
+
 ```python
 is_active = True
 print(5 > 2)  # True
@@ -371,6 +299,17 @@ Boolean
 
 ## 🧵 **7. Binary Types**
 
+```mermaid
+graph TD
+    A["Binary Types"] --> B["bytes (Immutable)"]
+    A --> C["bytearray (Mutable)"]
+    A --> D["memoryview (Mutable)"]
+
+    B --> B1["Example: b'hello'"]
+    C --> C1["Example: bytearray(5)"]
+    D --> D1["Example: memoryview(b'hello')"]
+```
+
 | Type       | Mutable | Example                |
 | ---------- | ------- | ---------------------- |
 | bytes      | ❌       | `b"hello"`             |
@@ -382,6 +321,12 @@ Used for low-level data manipulation, e.g. file I/O or networking.
 ---
 
 ## 🕳 **8. None Type**
+
+```mermaid
+graph TD
+    A["NoneType"] --> B["Represents no value"]
+    B --> C["Example: x = None"]
+```
 
 Represents **absence of value**
 
@@ -416,5 +361,24 @@ NoneType
 | bytearray  | ✅       | bytearray(3)       |
 | memoryview | ✅       | memoryview(b"abc") |
 | NoneType   | ❌       | None               |
+
+```mermaid
+graph LR
+    A["Immutable"] --> A1["int"]
+    A --> A2["float"]
+    A --> A3["complex"]
+    A --> A4["str"]
+    A --> A5["tuple"]
+    A --> A6["frozenset"]
+    A --> A7["bytes"]
+    A --> A8["bool"]
+    A --> A9["NoneType"]
+
+    B["Mutable"] --> B1["list"]
+    B --> B2["dict"]
+    B --> B3["set"]
+    B --> B4["bytearray"]
+    B --> B5["memoryview"]
+```
 
 ---

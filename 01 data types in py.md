@@ -1,64 +1,57 @@
-## 🧠 **1. Python Built-in Data Types (Overview)**
+# 🧠 1. Python Built-in Data Types (Overview)
 
 ```mermaid
 graph TD
-    A[Python Data Types] --> B[Text Type]
-    A --> C[Numeric Types]
-    A --> D[Sequence Types]
-    A --> E[Mapping Type]
-    A --> F[Set Types]
-    A --> G[Boolean Type]
-    A --> H[Binary Types]
-    A --> I[None Type]
+    A["Python Data Types"] --> B["Text Type"]
+    A --> C["Numeric Types"]
+    A --> D["Sequence Types"]
+    A --> E["Mapping Type"]
+    A --> F["Set Types"]
+    A --> G["Boolean Type"]
+    A --> H["Binary Types"]
+    A --> I["None Type"]
 
-    B --> B1[str]
-
-    C --> C1[int]
-    C --> C2[float]
-    C --> C3[complex]
-
-    D --> D1[list]
-    D --> D2[tuple]
-    D --> D3[range]
-
-    E --> E1[dict]
-
-    F --> F1[set]
-    F --> F2[frozenset]
-
-    G --> G1[bool]
-
-    H --> H1[bytes]
-    H --> H2[bytearray]
-    H --> H3[memoryview]
-
-    I --> I1[NoneType]
+    B --> B1["str"]
+    C --> C1["int"]
+    C --> C2["float"]
+    C --> C3["complex"]
+    D --> D1["list"]
+    D --> D2["tuple"]
+    D --> D3["range"]
+    E --> E1["dict"]
+    F --> F1["set"]
+    F --> F2["frozenset"]
+    G --> G1["bool"]
+    H --> H1["bytes"]
+    H --> H2["bytearray"]
+    H --> H3["memoryview"]
+    I --> I1["NoneType"]
 ```
 
 ---
 
-## 🧩 **2. Text Type (`str`)**
+# 🧩 2. Text Type (`str`)
 
 ```mermaid
 graph TD
-    A[String (Immutable)] --> B[Core]
-    A --> C[Indexing]
-    A --> D[Slicing]
-    A --> E[Encoding-Decoding]
+    A["String (Immutable)"] --> B["Core"]
+    A --> C["Indexing"]
+    A --> D["Slicing"]
+    A --> E["Encoding / Decoding"]
 
-    F["Example: 'Aromatic and Bold'"] --> G[Index: 0 → 'A']
-    F --> H[Index: 1 → 'r']
+    F["Example: 'Aromatic and Bold'"] --> G["Index 0: 'A'"]
+    F --> H["Index 1: 'r'"]
 ```
 
 ---
 
-## 🔢 **3. Numeric Types**
+# 🔢 3. Numeric Types
 
 ```mermaid
 graph TD
-    A[Numeric Types] --> B[int]
-    A --> C[float]
-    A --> D[complex]
+    A["Numeric Types"] --> B["int"]
+    A --> C["float"]
+    A --> D["complex"]
 
     B --> B1["Example: x = 10"]
     C --> C1["Example: pi = 3.14"]
@@ -67,71 +60,71 @@ graph TD
 
 ---
 
-## 📜 **4. Sequence Types**
+# 📜 4. Sequence Types
 
 ```mermaid
 graph TD
-    A[Sequence Types] --> B[List (Mutable)]
-    A --> C[Tuple (Immutable)]
-    A --> D[Range (Immutable)]
+    A["Sequence Types"] --> B["list (Mutable)"]
+    A --> C["tuple (Immutable)"]
+    A --> D["range (Immutable)"]
 
-    B --> B1["Example: ['apple','banana','cherry']"]
-    B --> B2[append(), remove(), sort()]
-    C --> C1["Example: (10,20,30)"]
-    C --> C2[Immutable, Indexing, Slicing]
-    D --> D1["Example: range(5) -> 0,1,2,3,4"]
+    B --> B1["Example: ['apple', 'banana', 'cherry']"]
+    B --> B2["Methods: append(), remove(), sort()"]
+    C --> C1["Example: (10, 20, 30)"]
+    C --> C2["Immutable, supports indexing/slicing"]
+    D --> D1["Example: range(5) => 0,1,2,3,4"]
 ```
 
 ---
 
-## 🧭 **5. Mapping Type (`dict`)**
+# 🧭 5. Mapping Type (`dict`)
 
 ```mermaid
 graph TD
-    A[Dictionary (Mutable)] --> B[Keys]
-    A --> C[Values]
-    A --> D[Items]
-    A --> E[Update, Pop, Clear]
+    A["Dictionary (Mutable)"] --> B["Keys"]
+    A --> C["Values"]
+    A --> D["Items"]
+    A --> E["Methods: update(), pop(), clear()"]
 
-    F["Example: {'name':'Alex','age':21}"] --> G["student['name'] -> 'Alex'"]
+    F["Example: {'name': 'Alex', 'age': 21}"] --> G["student['name'] = 'Alex'"]
 ```
 
 ---
 
-## 🧮 **6. Set Types**
+# 🧮 6. Set Types
 
 ```mermaid
 graph TD
-    A[Set Types] --> B[set (Mutable)]
-    A --> C[frozenset (Immutable)]
+    A["Set Types"] --> B["set (Mutable)"]
+    A --> C["frozenset (Immutable)"]
 
-    B --> B1[Unique Elements]
-    B --> B2[Union, Intersection, Difference]
-    C --> C1[Immutable, Unordered]
+    B --> B1["Unique Elements"]
+    B --> B2["Supports Union, Intersection, Difference"]
+    C --> C1["Immutable and Unordered"]
 
-    D["Example: {'red','green','blue'}"]
+    D["Example: {'red', 'green', 'blue'}"]
 ```
 
 ---
 
-## ⚙️ **7. Boolean Type**
+# ⚙️ 7. Boolean Type
 
 ```mermaid
 graph TD
-    A[Boolean Type] --> B[True]
-    A --> C[False]
+    A["Boolean Type"] --> B["True"]
+    A --> C["False"]
     D["Example: 5 > 2 → True"]
 ```
 
 ---
 
-## 🧵 **8. Binary Types**
+# 🧵 8. Binary Types
 
 ```mermaid
 graph TD
-    A[Binary Types] --> B[bytes (Immutable)]
-    A --> C[bytearray (Mutable)]
-    A --> D[memoryview (Mutable)]
+    A["Binary Types"] --> B["bytes (Immutable)"]
+    A --> C["bytearray (Mutable)"]
+    A --> D["memoryview (Mutable)"]
 
     B --> B1["Example: b'hello'"]
     C --> C1["Example: bytearray(5)"]
@@ -140,35 +133,35 @@ graph TD
 
 ---
 
-## 🕳 **9. None Type**
+# 🕳 9. None Type
 
 ```mermaid
 graph TD
-    A[NoneType] --> B["Represents no value"]
+    A["NoneType"] --> B["Represents no value"]
     B --> C["Example: x = None"]
 ```
 
 ---
 
-## 🔒 **10. Mutability Summary Table (as Diagram)**
+# 🔒 10. Mutability Summary
 
 ```mermaid
 graph LR
-    A[Immutable] --> A1[int]
-    A --> A2[float]
-    A --> A3[complex]
-    A --> A4[str]
-    A --> A5[tuple]
-    A --> A6[frozenset]
-    A --> A7[bytes]
-    A --> A8[bool]
-    A --> A9[NoneType]
+    A["Immutable"] --> A1["int"]
+    A --> A2["float"]
+    A --> A3["complex"]
+    A --> A4["str"]
+    A --> A5["tuple"]
+    A --> A6["frozenset"]
+    A --> A7["bytes"]
+    A --> A8["bool"]
+    A --> A9["NoneType"]
 
-    B[Mutable] --> B1[list]
-    B --> B2[dict]
-    B --> B3[set]
-    B --> B4[bytearray]
-    B --> B5[memoryview]
+    B["Mutable"] --> B1["list"]
+    B --> B2["dict"]
+    B --> B3["set"]
+    B --> B4["bytearray"]
+    B --> B5["memoryview"]
 ```
 
 ---
